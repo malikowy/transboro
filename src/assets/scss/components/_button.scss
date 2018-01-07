@@ -1,0 +1,46 @@
+.btn {
+  font-size: 1rem;
+  font-family: $font-family-base;
+  text-decoration: none;
+  @include media-breakpoint-down(lg) {
+    padding: 1rem 1.5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+  }
+
+  @include hover-focus {
+    box-shadow: none;
+    color: #fff;
+    background-color: #88a4d5;
+  }
+}
+//
+//.btn--contact {
+//  color: #fff;
+//  background-color: #88A4D5;
+//}
+.btn-contact {
+  @include button-variant(#fff, #4b445a, #4b445a);
+}
+
+//.btn-white {
+//  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+//}
+//.btn-blue-outline {
+//  @include button-outline-variant($btn-primary-bg, #fff);
+//  &:focus {
+//    color: #000;
+//    background-color: transparent;
+//  }
+//}
+//
+//.btn-black-outline {
+//  @include button-outline-variant(#000, #fff);
+//  &:focus {
+//    color: #000;
+//    background-color: transparent;
+//  }
+//}

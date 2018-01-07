@@ -1,0 +1,84 @@
+// standard breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1400px
+);
+
+$container-max-widths: (
+        xs: 320px,
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1350px
+);
+
+$grid-columns: 12;
+$grid-gutter-width-base: 30px;
+
+$grid-gutter-widths: (
+        xs: $grid-gutter-width-base,
+        sm: $grid-gutter-width-base,
+        md: $grid-gutter-width-base,
+        lg: $grid-gutter-width-base,
+        xl: $grid-gutter-width-base
+);
+
+$enable-flex: false;
+
+$spacer: 2rem;
+
+$enable-rounded: false;
+
+
+// LINKS
+
+$link-color: #000;
+$link-decoration: underline;
+
+// TYPO
+$font-size-base: 1rem;
+$font-family-base: 'Open Sans';
+
+$line-height-base: 1.33;
+$font-size-h1: 2.25rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.42rem;
+
+
+$headings-font-family: 'Open Sans';
+$headings-font-weight: 800;
+$headings-line-height: 1.2;
+
+// BTNS
+$color-primary: #88A4D5;
+//$color-primary: #0066cc;
+
+$btn-primary-bg: $color-primary;
+$btn-primary-border: $color-primary;
+$btn-font-weight: 600;
+$btn-padding-x: 2.4rem;
+$btn-padding-y: 1.3rem;
+
+
+$btn-white-color: #000;
+$btn-white-bg: #fff;
+$btn-white-border: #fff;
+
+
+$form-group-margin-bottom: 3.5rem;
+
+$input-bg: transparent;
+$input-btn-border-width: 2px;
+$input-border-color: #fff;
+$input-color: #fff;
+$input-color-placeholder: rgba($input-color, 0.7);
+$input-border-focus: $input-color-placeholder;
+$input-padding-y: 0.8rem;
+
+
+$custom-control-indicator-size: 2.5rem;
+$custom-control-gutter: 3.5rem;

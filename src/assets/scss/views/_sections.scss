@@ -1,0 +1,87 @@
+.ss_kv {
+  .kv_text {
+    background-color: #f0cebe8c;
+    min-width: 75%;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.5rem;
+    padding: 1rem;
+    @include media-breakpoint-down(sm) {
+      padding: 0.2rem
+    }
+  }
+}
+
+.ss_about {
+  .row {
+    background-color: #dfe3ed;
+  }
+}
+
+.ss_prices {
+  .row {
+    background-color: #dfe3ed;
+  }
+}
+
+//.ss_contact {
+//  .row {
+//  background-image: url(../img/bot_kv.jpg);
+//    background-size: cover;
+//    background-position: center;
+//    background-repeat: no-repeat;
+//}
+//}
+
+
+// GLOBAL STYLES
+.ss:before {
+  content: "";
+  display: block;
+  visibility: hidden;
+  margin-top: -50px;
+  height: 50px;
+}
+
+.p-absolute {
+  position: absolute;
+}
+.p-relative {
+  position: relative;
+}
+.p-centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.2rem;
+  }
+}
+h2 {
+  display: inline-block;
+
+  &:after {
+    margin-top: 6px;
+    content: "";
+    height: 1px;
+    background-color: #a65248;
+    width: 85%;
+    display: block;
+  }
+}
+.sub-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.white-box {
+  background-color: #fff;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+}
