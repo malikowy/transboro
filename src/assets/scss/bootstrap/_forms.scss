@@ -13,7 +13,9 @@
   font-size: $font-size-base;
   line-height: $input-line-height;
   color: $input-color;
+  color: #000;
   background-color: $input-bg;
+  background-color: #fff;
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
   background-clip: padding-box;
@@ -43,6 +45,7 @@
   // Placeholder
   &::placeholder {
     color: $input-color-placeholder;
+    color: darkgray;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
@@ -188,6 +191,7 @@ select.form-control-lg {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+  margin-bottom: 1rem;
 }
 
 .form-text {

@@ -66,15 +66,15 @@ p {
 
 &, .form-control {
   @include media-breakpoint-only(lg) {
-    font-size: 1.3125rem;
+    font-size: 1rem;
   }
   @include media-breakpoint-only(md) {
-    font-size: 1.125rem;
+    font-size: .9rem;
   }
   @include media-breakpoint-only(sm) {
-    font-size: 1.125rem;
+    font-size: .9rem;
   }
   @include media-breakpoint-only(xs) {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }

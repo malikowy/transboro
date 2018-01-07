@@ -1,4 +1,5 @@
 .ss_kv {
+  margin-top: 74px;
   .kv_text {
     background-color: #f0cebe8c;
     min-width: 75%;
@@ -14,6 +15,16 @@
 .ss_about {
   .row {
     background-color: #dfe3ed;
+
+    .white-box {
+      max-height: 18rem;
+      @include media-breakpoint-down(lg) {
+        max-height: 17rem;
+      }
+      @include media-breakpoint-down(md) {
+        max-height: 18rem;
+      }
+    }
   }
 }
 
@@ -23,14 +34,27 @@
   }
 }
 
-//.ss_contact {
-//  .row {
-//  background-image: url(../img/bot_kv.jpg);
-//    background-size: cover;
-//    background-position: center;
-//    background-repeat: no-repeat;
-//}
-//}
+.ss_contact {
+  .row {
+  background-image: url(../img/warsaw.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f0cebebd;
+    z-index: 0;
+  }
+    & > div {
+      z-index: 1;
+    }
+  }
+}
 
 
 // GLOBAL STYLES
