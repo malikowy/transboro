@@ -23,16 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto pt-2 pt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link btn" href="#"><i class="fas fa-home fa-sm"></i><span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn nav-scroll" href="#"><i class="fas fa-home fa-sm"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn" href="#o_nas">O nas</a>
+                        <a class="nav-link btn nav-scroll" href="#o_nas">O nas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn" href="#cennik">Cennik</a>
+                        <a class="nav-link btn nav-scroll" href="#cennik">Cennik</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn" href="#kontakt">Kontakt</a>
+                        <a class="nav-link btn nav-scroll" href="#kontakt">Kontakt</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white btn btn-contact" href="tel:+48506151087">506 151 087&nbsp;<i
@@ -195,30 +195,40 @@
                     <h2>KONTAKT</h2>
                 </div>
                 <div class="offset-5 col-5 ml-auto">
-                    <form>
+                    <form id="contact_form">
                         <div class="form-row">
                             <div class="form-group col-12">
-                                <label for="name">Imię i Nazwisko</label>
+                                <label for="name" id="label_name">Imię i Nazwisko</label>
                                 <input type="text" class="form-control" id="name" placeholder="Imię i Nazwisko">
-                            </div>
-                            <div class="form-group col-12">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                            <div class="form-group col-12">
-                                <label for="miasto">Miasto</label>
-                                <input type="text" class="form-control" id="miasto" placeholder="Miasto">
+                                <label class="error" for="name" id="name_error">This field is required.</label>
                             </div>
 
                             <div class="form-group col-12">
-                                <label for="text">Treść</label>
+                                <label for="email"  id="label_mail">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <label class="error" for="name" id="email_error">This field is required.</label>
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label for="phone"  id="label_phone">Numer telefonu</label>
+                                <input type="text" class="form-control" id="phone" placeholder="Numer">
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label for="city"  id="label_city">Miasto</label>
+                                <input type="text" class="form-control" id="city" placeholder="Miasto">
+                                <label class="error" for="name" id="city_error">This field is required.</label>
+                            </div>
+
+                            <div class="form-group col-12">
+                                <label for="text"  id="label_text">Treść</label>
                                 <input type="text" class="form-control" id="text" placeholder="Treść..">
+                                <label class="error" for="name" id="text_error">This field is required.</label>
                             </div>
                         </div>
 
 
-
-                        <button type="submit" name="submit" class="btn btn-contact ml-2">Wyślij</button>
+                        <button type="submit" name="submit" id="submit_btn" class="btn btn-contact ml-2">Wyślij</button>
                     </form>
                 </div>
             </div>
