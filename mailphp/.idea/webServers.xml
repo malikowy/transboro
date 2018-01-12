@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="261e1f82-76dc-4b8c-a99a-14ab7d1e6571" name="malikowy.vxm.pl" url="http://malikowy.vxm.pl">
+        <fileTransfer host="malikowy.vxm.pl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

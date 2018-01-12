@@ -41,17 +41,15 @@ function onScroll(event) {
     var scrollPos = $(document).scrollTop();
     $('.navbar-nav li a').each(function () {
         var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
+        var refElement = $(currLink.attr('href'));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.navbar-nav li a').removeClass("activated");
-            currLink.addClass("activated");
+            $('.navbar-nav li a').removeClass('activated');
+            currLink.addClass('activated');
         } else {
-            currLink.removeClass("activated");
+            currLink.removeClass('activated');
         }
     });
 }
-
-
 // SMOOOTH SCROLL ON CLICK
 $(document).on('click', '.nav-scroll[href^="#"]', function (event) {
     event.preventDefault();
@@ -83,60 +81,60 @@ $(document).on('click', '.nav-scroll[href^="#"]', function (event) {
 
 
 // AJAX FORM SUBMIT
-function validateEmail($email) {
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    if (!emailReg.test($email)) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
-$(function() {
-    $('.error').hide();
-    $("#submit_btn").click(function() {
-        // validate and process form here
-
-        $('.error').hide();
-        var name = $("input#name").val();
-        if (name === "") {
-            $("label#name_error").show();
-            $("input#name").focus();
-            return false;
-        }
-        var email = $("input#email").val();
-             if (!validateEmail(email)) {
-            $("label#email_error").show();
-            $("input#email").focus();
-            return false;
-        }
-        var phone = $("input#phone").val();
-        if (phone === "") {
-            $("label#phone_error").show();
-            $("input#phone").focus();
-            return false;
-        }
-        var text = $("input#text").val();
-        if (text === "") {
-            $("label#text_error").show();
-            $("input#text").focus();
-            return false;
-        }
-
-
-        var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&city=' + city + '&text=' + text;
-        //alert (dataString);return false;
-        $.ajax({
-            type: "POST",
-            url: "bin/process.php",
-            data: dataString,
-            success: function() {
-                console.log("wyslane")
-            },
-            error: function() {
-                console.log("fail")
-            }
-        });
-        return false;
-    });
-});
+// function validateEmail($email) {
+//     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+//     if (!emailReg.test($email)) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+//
+// $(function() {
+//     $('.error').hide();
+//     $("#submit_btn").click(function() {
+//         // validate and process form here
+//
+//         $('.error').hide();
+//         var name = $("input#name").val();
+//         if (name === "") {
+//             $("label#name_error").show();
+//             $("input#name").focus();
+//             return false;
+//         }
+//         var email = $("input#email").val();
+//              if (!validateEmail(email)) {
+//             $("label#email_error").show();
+//             $("input#email").focus();
+//             return false;
+//         }
+//         var phone = $("input#phone").val();
+//         if (phone === "") {
+//             $("label#phone_error").show();
+//             $("input#phone").focus();
+//             return false;
+//         }
+//         var text = $("input#text").val();
+//         if (text === "") {
+//             $("label#text_error").show();
+//             $("input#text").focus();
+//             return false;
+//         }
+//
+//
+//         var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&city=' + city + '&text=' + text;
+//         //alert (dataString);return false;
+//         $.ajax({
+//             type: "POST",
+//             url: "bin/process.php",
+//             data: dataString,
+//             success: function() {
+//                 console.log("wyslane")
+//             },
+//             error: function() {
+//                 console.log("fail")
+//             }
+//         });
+//         return false;
+//     });
+// });
