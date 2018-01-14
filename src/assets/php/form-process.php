@@ -4,21 +4,21 @@ $errorMSG = "";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+    $errorMSG = "Proszę podać imię ";
 } else {
     $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+    $errorMSG .= "Email jest wymagany ";
 } else {
     $email = $_POST["email"];
 }
 
 // MESSAGE
 if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Treść jest wymagana ";
 } else {
     $message = $_POST["message"];
 }
@@ -35,11 +35,11 @@ $Subject = "Nowa wiadomość z formularza";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ".$name . "\n";
-$Body .= "City: ".$city . "\n";
-$Body .= "Phone: ".$phone . "\n";
+$Body .= "Dane: ".$name . "\n";
+$Body .= "Miasto: ".$city . "\n";
+$Body .= "Telefon: ".$phone . "\n";
 $Body .= "Email: ".$email . "\n";
-$Body .= "Message: ".$message . "\n";
+$Body .= "Wiadomość: ".$message . "\n";
 
 
 // send email
@@ -50,7 +50,7 @@ if ($success && $errorMSG == ""){
    echo "success";
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo "Coś poszło nie tak :(";
     } else {
         echo $errorMSG;
     }
