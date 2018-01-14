@@ -1,7 +1,7 @@
 // CUSTOM SCRIPTS
 
 // HIDE NAVBAR ON LINK CLICK
-$('.navbar-nav>li>a').on('click', function(){
+$('.navbar-nav>li>.nav-scroll').on('click', function(){
     $('.navbar-collapse').collapse('hide');
 });
 $(document).ready(function () {
