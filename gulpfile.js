@@ -21,6 +21,8 @@ var config = {
 	jsinPopper: 'src/assets/js/popper.js',
 	jsinBS: 'src/assets/js/bootstrap.js',
 	jsinScript: 'src/assets/js/scripts.js',
+	jsinValidator: 'src/assets/js/validator.min.js',
+	jsinForm: 'src/assets/js/form-scripts.js',
 	imgin: 'src/assets/img/**/*.{jpg,jpeg,png,gif,svg}',
 	htmlin: 'src/*.html',
 	scssin: 'src/assets/scss/**/*.scss',
@@ -45,7 +47,7 @@ gulp.task('serve', ['sass'], function () {
 	browserSync({
 		server: config.src
 	});
-	gulp.watch([config.htmlin, config.jsinjQ, config.jsinPopper, config.jsinBS, config.jsinScript], ['reload']);
+	gulp.watch([config.htmlin, config.jsinjQ, config.jsinPopper, config.jsinBS, config.jsinScript, config.jsinValidator, config.jsinForm], ['reload']);
 	gulp.watch(config.scssin, ['sass']);
 });
 
