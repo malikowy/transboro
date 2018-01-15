@@ -43,7 +43,7 @@ $Body .= "Wiadomość: ".$message . "\n";
 
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail($EmailTo, $Subject, $Body, "From:".$email.PHP_EOL."Content-type: text/plain; charset=utf-8");
 
 // redirect to success page
 if ($success && $errorMSG == ""){
