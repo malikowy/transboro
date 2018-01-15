@@ -30,7 +30,7 @@ if (empty($_POST["message"])) {
     $phone = $_POST["phone"];
 
 
-$EmailTo = "blackbird969@gmail.com";
+$EmailTo = "info@borowski-przeprowadzki.pl";
 $Subject = "Nowa wiadomość z formularza";
 
 // prepare email body text

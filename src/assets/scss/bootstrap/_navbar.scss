@@ -220,6 +220,15 @@
         color: $navbar-light-disabled-color;
       }
     }
+    .activated {
+      box-shadow: none;
+      color: #fff;
+      background-color: #88a4d5;
+
+      svg path {
+        fill: #fff;
+      }
+    }
 
     .open > .nav-link,
     .active > .nav-link,

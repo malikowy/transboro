@@ -35,8 +35,8 @@ var config = {
 	jsoutname: 'scripts.js',
 	cssreplaceout: 'assets/css/style.css',
 	jsreplaceout: 'assets/js/scripts.js',
-	fontsin: 'src/assets/fonts/**/*.{ttf,woff,woff2,eot,eof,svg}',
-	fontsout: 'dist/assets/fonts/'
+	phpin: 'src/assets/php/*.{php}',
+	phpout: 'dist/assets/php/'
 };
 
 gulp.task('reload', function () {
@@ -85,7 +85,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-	return gulp.src([config.jsinjQ, config.jsinPopper, config.jsinBS, config.jsinScript])
+	return gulp.src([config.jsinjQ, config.jsinPopper, config.jsinBS, config.jsinScript, config.jsinValidator, config.jsinForm])
 		.pipe(concat(config.jsoutname))
 		.pipe(uglify())
 		.pipe(gulp.dest(config.jsout));
@@ -133,9 +133,9 @@ gulp.task('html-build', function () {
 		.pipe(gulp.dest(config.dist))
 });
 
-gulp.task('copyfonts', function () {
-	gulp.src(config.fontsin)
-		.pipe(gulp.dest(config.fontsout));
+gulp.task('phpcopy', function () {
+	gulp.src(config.phpin)
+		.pipe(gulp.dest(config.phpout));
 });
 
 gulp.task('clean', function () {
@@ -143,7 +143,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', function () {
-	sequence('clean', ['html-build', 'css', 'js', 'img', 'copyfonts']);
+	sequence('clean', ['html-build', 'css', 'js', 'img', 'phpcopy']);
 });
 
 

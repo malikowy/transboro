@@ -1,7 +1,7 @@
 .ss_kv {
-  margin-top: 74px;
+  margin-top: 48px;
   .kv_text {
-    background-color: #f0cebe8c;
+    background-color: rgba(240,206,190,0.55);
     min-width: 75%;
     letter-spacing: 0.1rem;
     word-spacing: 0.5rem;
@@ -35,27 +35,102 @@
 }
 
 .ss_contact {
-  .row {
-  background-image: url(../img/warsaw.png);
+  .container > .row {
+    background-image: url(../img/warsaw.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f0cebebd;
-    z-index: 0;
-  }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(240,206,190,0.74);
+      z-index: 0;
+    }
     & > div {
       z-index: 1;
+
+      .list-unstyled {
+        li {
+          margin-bottom: 5px;
+        }
+      }
+      .link {
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px;
+
+        @include hover-focus {
+          text-decoration: underline;
+        }
+      }
+
+      label {
+        display: none;
+      }
+      .help-block {
+        position: absolute;
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+        &:last-of-type {
+          margin-bottom: 1rem;
+        }
+      }
+
+      #msgSubmit {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-down(md) {
+          position: static;
+          transform: translateX(0%);
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }
 
+.fixed-right {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  width: 54px;
+  text-align: center;
+  z-index: 9;
+  .icon {
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-right: none;
+    svg {
+      transition: transform 300ms ease-in-out;
+    }
+    @include hover-focus {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .fb-icon {
+    background-color: #3753B3;
+    color: #fff;
+  }
+  .call-icon {
+    background-color: #fff;
+    color: #000;
+  }
+
+}
 
 // GLOBAL STYLES
 .ss:before {
@@ -69,14 +144,17 @@
 .p-absolute {
   position: absolute;
 }
+
 .p-relative {
   position: relative;
 }
+
 .p-centered {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .navbar-brand {
   font-size: 1.6rem;
   font-weight: 700;
@@ -86,6 +164,7 @@
     font-size: 1.2rem;
   }
 }
+
 h2 {
   display: inline-block;
 
@@ -98,6 +177,7 @@ h2 {
     display: block;
   }
 }
+
 .sub-heading {
   font-size: 1.6rem;
   font-weight: 700;
